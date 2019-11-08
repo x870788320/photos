@@ -2,9 +2,9 @@
     <div class="home">
         <x-img :src="src" class="imgB">
             {{ this.$store.state.home.name   }}
+            <Nav/>
+            <button @click="jj">+++</button>
         </x-img>
-        <Nav/>
-        <button @click="jj">+++</button>
     </div>
 </template>
 

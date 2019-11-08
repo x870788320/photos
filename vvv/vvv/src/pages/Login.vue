@@ -32,11 +32,11 @@
         },
         mounted(){
             // console.log(this.arrdd)
-            this.arrdd = [... new Set(this.dd.split('、'))]
-            console.log(this.arrdd)
+            // this.arrdd = [... new Set(this.dd.split('、'))]
+            // console.log(this.arrdd)
 
-            this.arree = [... new Set(this.eee.split(' '))]
-            console.log(this.arree)
+            // this.arree = [... new Set(this.eee.split(' '))]
+            // console.log(this.arree)
         },
         methods:{
             logIn(){

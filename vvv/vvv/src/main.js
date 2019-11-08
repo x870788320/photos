@@ -6,6 +6,7 @@ import store from './store'
 // import './../theme/theme.less'
 
 import Api from './components'
+import '../index.css'
 
 Vue.use(Api)
 Vue.use(Axios)
@@ -15,5 +16,5 @@ Vue.config.productionTip = false
 new Vue({
     router,
     store,
-  render: h => h(App),
+    render: h => h(App),
 }).$mount('#app')
