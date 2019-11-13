@@ -1,10 +1,11 @@
 <template>
     <div class="home">
-        <x-img :src="src" class="imgB">
-            {{ this.$store.state.home.name   }}
+        <div class = 'home_nav'>
             <Nav/>
-            <button @click="jj">+++</button>
-        </x-img>
+        </div>
+        <div>
+            <CubeNav/>
+        </div>
     </div>
 </template>
 
@@ -14,12 +15,14 @@
     export default {
         name: "Home",
         components:{
-            'Nav': () => import('../components/Nav')
+            'Nav': () => import('../components/Nav'),
+            'CubeNav': () =>import('../components/CubeNav')
         },
         data(){
             return {
-                src:'youtube.png'
             }
+        },
+        computed:{
         },
         mounted(){
             // this.$http.get('/search/count').then( (data) => {
@@ -46,9 +49,9 @@
 .home{
     width: 100%;
     height: 100%;
+    border-top: 1px solid #000;
 }
- .imgB{
-     width: 300px;
-     height: 300px;
- }
+.home_nav{
+    margin: 3rem 2rem;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div id = "imgC">
+    <div id = "imgC" :style="containBck">
         <div :style = 'ImgBck' class="sss">
             <slot></slot>
         </div>
@@ -18,12 +18,12 @@
             imgWidth: {
                 type:String,
                 required: false,
-                default: '300px'
+                default: '100%'
             },
             imgHeight: {
                 type:String,
                 required: false,
-                default: '300px'
+                default: '100%'
             }
         },
         data(){
@@ -37,26 +37,32 @@
             ImgBck(){
                 return {
                     // background: "url(" + require('../../../static/imgs/' + this.src ) + ") 0% 0% / cover",
-                    background: `url(${require(`../../../static/imgs/${this.src}`)}) center center / contain no-repeat`
+                    background: `url(${require(`../../../static/imgs/${this.src}`)}) center center / contain no-repeat`,
                     // background: "url(" + require('../../../static/imgs/' + this.src ) + ") center center / contain no-repeat",
-                    // width: this.imgWidth,
-                    // height: this.imgHeight
+                    width: this.imgWidth,
+                    height: this.imgHeight
+                }
+            },
+            containBck(){
+                return {
+                    width: this.imgWidth,
+                    height: this.imgHeight
                 }
             }
         },
         mounted() {
-            console.log(this.src)
+            console.log(this.imgHeight)
         }
     }
 </script>
 
 <style scoped>
-    #imgC {
+    /* #imgC {
         width: 100%;
         height: 100%;
-    }
-.sss{
+    } */
+/* .sss{
     width: 100%;
     height: 100%;
-}
+} */
 </style>

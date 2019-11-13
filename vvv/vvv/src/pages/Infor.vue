@@ -1,8 +1,8 @@
 <template>
     <div class="Infor">
-        <!-- <div class = 'infor_img_container'>
+        <div class = 'infor_img_container'>
             <x-img :src = 'detail.name'/>
-        </div> -->
+        </div>
         <div class = 'infor_form_container'>
             <x-form :detail = 'detail'/> 
         </div>
@@ -42,11 +42,11 @@
 
 
     .infor_img_container {
-        margin: 0 auto;
+        margin: 4rem auto;
         width: 60%;
         height: 500px;
         padding: 20px;
-        border: 1px solid #333;
+        border: 1px solid #fba;
         display: flex;
         justify-content: center;
         align-items: center;
