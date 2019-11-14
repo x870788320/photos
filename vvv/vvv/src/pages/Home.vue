@@ -52,6 +52,6 @@
     border-top: 1px solid #000;
 }
 .home_nav{
-    margin: 3rem 2rem;
+    margin: 5rem 2rem;
 }
 </style>
