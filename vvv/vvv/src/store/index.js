@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import home from './Home'
+import show from './Show'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state:{
         isLogIn: false,
-        picData:[]
+        picData:[],
+        page: 1,
+        count:10,
     },
     mutations:{
         changeLoginState(state, isLogin){
@@ -24,9 +27,11 @@ export default new Vuex.Store({
 
         getPicData({commit},picData ) {
             commit('getPicData',picData)
+            console.log(Vue.$router)
         },
     },
     modules:{
-        home
+        home,
+        show
     }
 })

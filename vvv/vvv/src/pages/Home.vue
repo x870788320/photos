@@ -3,9 +3,7 @@
         <div class = 'home_nav'>
             <Nav/>
         </div>
-        <div>
             <CubeNav/>
-        </div>
     </div>
 </template>
 

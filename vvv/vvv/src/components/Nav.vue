@@ -43,7 +43,7 @@ import { mapState } from 'vuex'
             navToShow(item){
                 this.navClass = item;
                 this.$router.push({
-                    name:"show",
+                    path:"show",
                     params:{
                         item:item
                     }
